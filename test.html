@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+	<meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript" src="echarts.js"></script>
+<script type="text/javascript">
+	var Data = [];
+	function dataInit(data) {
+		for(var i=0;i<data.features.length;i++){
+			Data.push({
+				name:data.features[i].properties.name,
+				value:data.features[i].properties.value,
+				xy:xyInit(data.features[i].geometry.coordinates[0],'xy'),
+				xyString:xyInit(data.features[i].geometry.coordinates[0],'xyString'),
+				itemStyle:{
+					normal:{
+						color:data.features[i].properties.color
+					}
+				}
+			})
+		}
+	}
+
+	function xyInit(arr,type) {
+		var newArr = [];
+		var newStr = '';
+		for(var i=0;i<arr.length;i++){
+			newArr.push({
+				index:i,
+				x:arr[i][0],
+				y:arr[i][1]
+			});
+			newStr+='index:'+i+',x:'+arr[i][0]+',y:'+arr[i][1]+';'
+		}
+		if(type == 'xy'){
+			return newArr
+		}else{
+			return newStr
+		}
+	}
+
+	var data1 = [
+		{name: 'T1', value: 1, title:'门'},
+		{name: 'T2', value: 2, title:'门'},
+		{name: 'T3', value: 2, title:'门'},
+		{name: 'T4', value: 2, title:'门'},
+		{name: 'T5', value: 2, title:'门'}
+	];
+
+	var data2 = [
+		{name: 'M1', value: 3,title:'出口'}
+	];
+
+	var geoCoordMap = {
+		'T1':[-297,55],
+		'T2':[-287,55],
+		'T3':[-277,55],
+		'T4':[-276,54.5],
+		'T5':[-276,53.5],
+		'M1':[-278.5,47]
+	};
+
+	function convertData1(data) {
+		var res = [];
+		for (var i = 0; i < data.length; i++) {
+			var geoCoord = geoCoordMap[data[i].name];
+			if (geoCoord) {
+				res.push({
+					name: data[i].title,
+					value: geoCoord.concat(data[i].value),
+				});
+			}
+		}
+		return res;
+	}
+
+	function convertData2(data) {
+		var res = [];
+		for (var i = 0; i < data.length; i++) {
+			var geoCoord = geoCoordMap[data[i].name];
+			if (geoCoord) {
+				res.push({
+					name: data[i].title,
+					value: geoCoord.concat(data[i].value)
+				});
+			}
+		}
+		return res;
+	}
+
+	var dom = document.getElementById("container");
+	var myChart = echarts.init(dom);
+	option = null;
+	myChart.showLoading();
+
+	$.get('test.json', function (usaJson) {
+		dataInit(usaJson);
+		myChart.hideLoading();
+
+		echarts.registerMap('china1', usaJson, {
+			Alaska: {              // 把阿拉斯加移到美国主大陆左下方
+				left: -131,
+				top: 25,
+				width: 15
+			},
+			Hawaii: {
+				left: -110,        // 夏威夷
+				top: 28,
+				width: 5
+			},
+			'Puerto Rico': {       // 波多黎各
+				left: -76,
+				top: 26,
+				width: 2
+			}
+		});
+		option = {
+			testStyle:{
+				color:'#ffffff'
+			},
+			tooltip: {
+				trigger: 'item',
+				showDelay: 0,
+				position: 'top',
+				transitionDuration: 0.2,
+				formatter: function (params) {
+					function stringChange(str) {
+						var arr = str.split(';');
+						var string = '';
+						arr.map(function (el) {
+							string+=el+'</br>'
+						});
+						return string
+					}
+					return params.data.name + ': ' + params.data.value+'</br>'+stringChange(params.data.xyString);
+				}
+			},
+			geo: {
+				map: 'china1',
+				roam: true,
+				scaleLimit: {
+					min:0.5,
+					max:2
+				},
+				label: {
+					normal: {
+						show: true,
+						textStyle: {
+							color: 'rgba(0,0,0,0.4)'
+						}
+					}
+				},
+				itemStyle: {
+					normal:{
+						borderColor: 'rgba(0, 0, 0, 0.2)'
+					},
+					emphasis:{
+						areaColor: null,
+						shadowOffsetX: 0,
+						shadowOffsetY: 0,
+						shadowBlur: 20,
+						borderWidth: 0,
+						shadowColor: 'rgba(0, 0, 0, 0.5)'
+					}
+				}
+			},
+			series : [
+				{
+					type: 'scatter',
+					coordinateSystem: 'geo',
+					data: convertData1(data1),
+					symbolSize: 30,
+					symbol:'image://m1.jpg',
+					symbolRotate: 0,
+					tooltip: {
+						show:false
+					},
+					label: {
+						normal: {
+							formatter: '{b}',
+							position: 'right',
+							show: false
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					itemStyle: {
+						normal: {
+							color: '#A06C00'
+						}
+					}
+				},
+				{
+					type: 'scatter',
+					coordinateSystem: 'geo',
+					data: convertData2(data2),
+					symbolSize: 30,
+					symbol:'image://m2.jpg',
+					symbolRotate: 0,
+					tooltip: {
+						show:false
+					},
+					label: {
+						normal: {
+							formatter: '{b}',
+							position: 'right',
+							show: false
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					itemStyle: {
+						normal: {
+							color: '#A06C00'
+						}
+					}
+				},
+				{
+					name: 'USA PopEstimates',
+					type: 'map',
+					geoIndex: 0,
+					map: 'china1',
+					data:Data
+				}
+			]
+		};
+
+		myChart.setOption(option,true);
+	});
+	if (option && typeof option === "object") {
+		//myChart.setOption(option, true);
+	}
+	myChart.on('click', function (params) {
+		console.log(params);
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "name": "",
+        "value": "--",
+        "color": "#E2E2E2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -264,
+              59
+            ],
+            [
+              -264,
+              47
+            ],
+            [
+              -228,
+              47
+            ],
+            [
+              -264,
+              47
+            ],
+            [
+              -264,
+              59
+            ],
+            [
+              -228,
+              59
+            ],
+            [
+              -228,
+              47
+            ],
+            [
+              -228,
+              47
+            ],
+            [
+              -228,
+              59
+            ],
+            [
+              -237,
+              59
+            ],
+            [
+              -264,
+              59
+            ],
+            [
+              -264,
+              59
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "办公室1123",
+        "value": "--",
+        "color": "#C5DFE4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -263,
+              55
+            ],
+            [
+              -255,
+              55
+            ],
+            [
+              -255,
+              58
+            ],
+            [
+              -263,
+              58
+            ],
+            [
+              -263,
+              55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "办公室2123",
+        "value": "--",
+        "color": "#C5DFE4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -255,
+              56
+            ],
+            [
+              -255,
+              55
+            ],
+            [
+              -245,
+              55
+            ],
+            [
+              -245,
+              58
+            ],
+            [
+              -255,
+              58
+            ],
+            [
+              -255,
+              56
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "办公室3123",
+        "value": "--",
+        "color": "#C5DFE4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -245,
+              55
+            ],
+            [
+              -236,
+              55
+            ],
+            [
+              -236,
+              58
+            ],
+            [
+              -245,
+              58
+            ],
+            [
+              -245,
+              55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "办公室4123",
+        "value": "--",
+        "color": "#FCF8F0"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -236,
+              54
+            ],
+            [
+              -229,
+              54
+            ],
+            [
+              -229,
+              58
+            ],
+            [
+              -236,
+              58
+            ],
+            [
+              -236,
+              55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "会议室123",
+        "value": "--",
+        "color": "#E28300"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -236,
+              48
+            ],
+            [
+              -229,
+              48
+            ],
+            [
+              -229,
+              54
+            ],
+            [
+              -236,
+              54
+            ],
+            [
+              -236,
+              48
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "刘桂贤123",
+        "value": "测试",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -256,
+              53
+            ],
+            [
+              -252,
+              53
+            ],
+            [
+              -252,
+              54
+            ],
+            [
+              -256,
+              54
+            ],
+            [
+              -256,
+              53
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "赵策123",
+        "value": "安卓",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -252,
+              53
+            ],
+            [
+              -248,
+              53
+            ],
+            [
+              -248,
+              54
+            ],
+            [
+              -252,
+              54
+            ],
+            [
+              -252,
+              53
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "李福天123",
+        "value": "IOS",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -248,
+              53
+            ],
+            [
+              -244,
+              53
+            ],
+            [
+              -244,
+              54
+            ],
+            [
+              -248,
+              54
+            ],
+            [
+              -248,
+              53
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "赵莹123",
+        "value": "行政",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -244,
+              53
+            ],
+            [
+              -240,
+              53
+            ],
+            [
+              -240,
+              54
+            ],
+            [
+              -244,
+              54
+            ],
+            [
+              -244,
+              53
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "name": "--123",
+        "value": "--",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -263,
+              53
+            ],
+            [
+              -260,
+              53
+            ],
+            [
+              -260,
+              54
+            ],
+            [
+              -263,
+              54
+            ],
+            [
+              -263,
+              53
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "name": "贾昊123",
+        "value": "技术总监",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -263,
+              52
+            ],
+            [
+              -260,
+              52
+            ],
+            [
+              -260,
+              53
+            ],
+            [
+              -263,
+              53
+            ],
+            [
+              -263,
+              52
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "name": "迟东阳123",
+        "value": "前端",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -256,
+              52
+            ],
+            [
+              -252,
+              52
+            ],
+            [
+              -252,
+              53
+            ],
+            [
+              -256,
+              53
+            ],
+            [
+              -256,
+              52
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "name": "李墨123",
+        "value": "后段",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -252,
+              52
+            ],
+            [
+              -248,
+              52
+            ],
+            [
+              -248,
+              53
+            ],
+            [
+              -252,
+              53
+            ],
+            [
+              -252,
+              52
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "name": "徐海啸123",
+        "value": "IOS",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -248,
+              52
+            ],
+            [
+              -244,
+              52
+            ],
+            [
+              -244,
+              53
+            ],
+            [
+              -248,
+              53
+            ],
+            [
+              -248,
+              52
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "name": "王英超123",
+        "value": "前端",
+        "color": "#E1D5E4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -244,
+              52
+            ],
+            [
+              -240,
+              52
+            ],
+            [
+              -240,
+              53
+            ],
+            [
+              -244,
+              53
+            ],
+            [
+              -244,
+              52
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "name": "门123",
+        "value": "出口",
+        "color": "#E2E2E2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -239,
+              47
+            ],
+            [
+              -238,
+              47
+            ],
+            [
+              -238,
+              48
+            ],
+            [
+              -239,
+              48
+            ],
+            [
+              -239,
+              47
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
